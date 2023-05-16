@@ -1,6 +1,5 @@
 {
   "name": "vin_decoder",
-  "homepage": "https://myroslavkop.github.io/vin-decoder/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -6,11 +6,7 @@ import validation from '../../../../utils/validation';
 
 import styles from './VinForm.module.scss';
 
-const VinForm = ({ setData, value, setValue, loading, setLoading }) => {
-  const [recentQueries, setRecentQueries] = useState(() => {
-    const storedQueries = localStorage.getItem('updatedQueries');
-    return storedQueries ? JSON.parse(storedQueries) : [];
-  });
+const VinForm = ({ setRecentQueries, setData, value, setValue, loading, setLoading }) => {
   const [messageState, setMessageState] = useState({
     error: '',
     success: '',
@@ -34,6 +30,7 @@ const VinForm = ({ setData, value, setValue, loading, setLoading }) => {
         data: { Results },
       } = await axios.get(`https://vpic.nhtsa.dot.gov/api/vehicles/decodevin/${value}?format=json`);
       setData(Results || []);
+
       setMessageState({ success: 'Results returned successfully.' });
       setTimeout(() => {
         setMessageState({ success: '' });
