@@ -1,0 +1,28 @@
+@import "src/scss/index.scss";
+.header {
+  background-color: $color-main;
+}
+.navbar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  text-transform: uppercase;
+}
+.link {
+  font-size: 20px;
+  cursor: pointer;
+  &:hover {
+    color: gray;
+    transition: 0.25s;
+  }
+  @include xs {
+    font-size: 16px;
+  }
+}

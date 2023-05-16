@@ -1,0 +1,21 @@
+@import "src/scss/index.scss";
+
+.vin_data {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  @include md {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+.vin_table {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.vin_table_container {
+  background-color: #f6f6fe;
+  border-radius: 10px;
+  padding: 30px;
+}

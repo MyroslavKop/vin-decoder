@@ -1,0 +1,11 @@
+# Ignore folders:
+build
+
+# Ignore files:
+*.html
+*.svg
+*.jpg
+*.png
+
+package-lock.json
+package.json

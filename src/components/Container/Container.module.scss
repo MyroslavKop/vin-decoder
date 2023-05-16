@@ -1,0 +1,10 @@
+@import "src/scss/index.scss";
+
+.container {
+  padding: 40px 80px;
+  max-width: 1440px;
+  margin: 0 auto;
+  @include sm {
+    padding: 40px 20px;
+  }
+}

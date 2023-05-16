@@ -1,0 +1,15 @@
+@import "src/scss/index.scss";
+.spinner {
+  height: 30px;
+  width: 30px;
+  border: 6px solid;
+  border-color: $color-main transparent white transparent;
+  border-radius: 50%;
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,59 @@
+@import "src/scss/index.scss";
+
+.form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.form_button {
+  padding: 10px;
+  background-color: $color-main;
+  color: $text-color-white;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  height: 40px;
+  max-width: 140px;
+  &:hover {
+    background-color: $button-color-hover;
+    transition: 0.25s;
+  }
+  @include xs {
+    padding: 5px;
+    max-width: 80px;
+    font-size: 12px;
+  }
+}
+.form_input {
+  outline: none;
+  border-color: $color-main;
+  height: 40px;
+  border-radius: 5px;
+  width: 300px;
+  margin-right: 20px;
+  &::placeholder {
+    @include xs {
+      font-size: 12px;
+    }
+  }
+  @include xs {
+    max-width: 160px;
+    font-size: 12px;
+  }
+}
+.helper_text {
+  position: absolute;
+  max-width: 300px;
+  top: 100%;
+  left: 0;
+  @include xs {
+    font-size: 12px;
+    max-width: 170px;
+  }
+}
+.success {
+  color: green;
+}
+.error {
+  color: red;
+}
