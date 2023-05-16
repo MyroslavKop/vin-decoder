@@ -15,14 +15,15 @@ const RecentQueriesList = ({ setValue, loading }) => {
     <div className={styles.queries}>
       <h3 className={styles.title}>Your latest requests</h3>
       <ul className={styles.list}>
-        {!recentQueries.length && <li>No requests</li>}
-        {recentQueries.map(({ id, vinValue }) => {
-          return (
-            <li key={id} onClick={handleClick(vinValue)}>
-              {vinValue}
-            </li>
-          );
-        })}
+        {!recentQueries && <li>No requests</li>}
+        {recentQueries &&
+          recentQueries.map(({ id, vinValue }) => {
+            return (
+              <li key={id} onClick={handleClick(vinValue)}>
+                {vinValue}
+              </li>
+            );
+          })}
       </ul>
     </div>
   );

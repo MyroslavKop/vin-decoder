@@ -28,7 +28,7 @@ const VariableTable = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [variableId]);
 
   if (loading) {
     return <Spinner />;
